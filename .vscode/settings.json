@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/e4c6ea35-94aa-4ee3-b351-8b31e9ecbfa0/resourceGroups/imahesh/providers/Microsoft.Web/sites/imahesh",
+    "appService.deploySubpath": "."
+}
