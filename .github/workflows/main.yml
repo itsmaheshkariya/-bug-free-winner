@@ -14,7 +14,7 @@ jobs:
         run: | 
           npm i
           docker build -t app .
-          docker login -u ${dev.DOCKER_USER} -p ${dev.DOCKER_SECRET}
+          docker login -u ${{dev.DOCKER_USER} -p ${dev.DOCKER_SECRET}}
           docker tag app itsmaheshkariya/test
           docker push itsmaheshkariya/test
           
