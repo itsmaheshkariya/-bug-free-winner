@@ -15,6 +15,6 @@ jobs:
           npm i
           docker build -t app .
           docker login -u itsmaheshkariya -p a05605ce-8f5c-4ead-96b6-4067a8b7468d
-          docker tag app test
+          docker tag app itsmaheshkariya/test
           docker push itsmaheshkariya/test
           
