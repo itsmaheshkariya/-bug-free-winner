@@ -12,9 +12,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Script
         run: | 
+          echo ${{ secrets.DOCKER_USER }}
           npm i
           docker build -t app .
-          docker login -u ${{ dev.DOCKER_USER }} -p ${{ dev.DOCKER_SECRET }}
+          docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_SECRET }}
           docker tag app itsmaheshkariya/test
           docker push itsmaheshkariya/test
           
