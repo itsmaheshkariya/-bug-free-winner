@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Script
         run: | 
+          echo  ${{ secrets.DOCKER_USER }} 
+          echo  ${{ secrets.DOCKER_SECRET }}
           npm i
           docker build -t app .
           docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_SECRET }}
