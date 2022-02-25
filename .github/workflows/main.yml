@@ -14,7 +14,7 @@ jobs:
         run: | 
           npm i
           docker build -t app .
-          docker echo  ${{ secrets.DOCKER_SECRET }} | login -u ${{ secrets.DOCKER_USER }} --password-stdin
+          echo ${{ secrets.DOCKER_SECRET }} | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
           docker tag app itsmaheshkariya/test
           docker push itsmaheshkariya/test
 
